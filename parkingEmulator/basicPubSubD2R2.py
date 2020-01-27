@@ -121,7 +121,7 @@ loopCount = 0
 #locLon
 
 parkingList = {
-    "5275-Elfrieda-Street": {
+    "15275-Elfrieda-Street": {
       "locLat": "-48.8712",
       "locLon": "-151.6866",
       "address": "15275 Elfrieda Street, XYZ, AB",
