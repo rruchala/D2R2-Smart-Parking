@@ -12,6 +12,10 @@
  * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
  * express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
+ 
+
+    D2R2 modified for parking options
+    
  */
  '''
 
@@ -104,7 +108,7 @@ else:
 myAWSIoTMQTTClient.configureAutoReconnectBackoffTime(1, 32, 20)
 myAWSIoTMQTTClient.configureOfflinePublishQueueing(-1)  # Infinite offline Publish queueing
 myAWSIoTMQTTClient.configureDrainingFrequency(2)  # Draining: 2 Hz
-myAWSIoTMQTTClient.configureConnectDisconnectTimeout(10)  # 10 sec
+myAWSIoTMQTTClient.configureConnectDisconnectTimeout(30)  # 10 sec
 myAWSIoTMQTTClient.configureMQTTOperationTimeout(5)  # 5 sec
 
 # Connect and subscribe to AWS IoT
@@ -209,4 +213,4 @@ while True:
         if args.mode == 'publish':
             print('Published topic %s: %s\n' % (topic, messageJson))
         loopCount += 1
-    time.sleep(random.choice([1, 2, 3, 5, 8 ,13, 21, 34]) )
+    time.sleep(random.choice([1, 2, 3, 5, 8 ,13, 21]) )
